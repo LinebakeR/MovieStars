@@ -14,6 +14,10 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -33,6 +37,7 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         'T' => 
         array (
             'Twig\\' => 5,
+            'Tmdb\\' => 5,
         ),
         'S' => 
         array (
@@ -98,6 +103,7 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Link\\' => 9,
+            'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'PhpParser\\' => 10,
@@ -106,6 +112,16 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         'M' => 
         array (
             'Monolog\\' => 8,
+        ),
+        'K' => 
+        array (
+            'Kevinrob\\GuzzleCache\\' => 21,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
         ),
         'F' => 
         array (
@@ -132,6 +148,10 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
+        'C' => 
+        array (
+            'Concat\\Http\\Middleware\\' => 23,
+        ),
         'A' => 
         array (
             'App\\Tests\\' => 10,
@@ -143,8 +163,8 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Zend\\EventManager\\' => 
         array (
@@ -161,6 +181,10 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Tmdb\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-tmdb/api/lib/Tmdb',
         ),
         'Symfony\\Polyfill\\Php72\\' => 
         array (
@@ -398,6 +422,10 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         array (
             0 => __DIR__ . '/..' . '/psr/link/src',
         ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
@@ -417,6 +445,22 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Kevinrob\\GuzzleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kevinrob/guzzle-cache-middleware/src',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'Fig\\Link\\' => 
         array (
@@ -468,10 +512,10 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
             1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
             2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
-            3 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            3 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
         ),
         'Doctrine\\Bundle\\MigrationsBundle\\' => 
         array (
@@ -484,6 +528,10 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         'Doctrine\\Bundle\\DoctrineBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
+        ),
+        'Concat\\Http\\Middleware\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rtheunissen/guzzle-log-middleware/src',
         ),
         'App\\Tests\\' => 
         array (
