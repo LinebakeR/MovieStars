@@ -1,0 +1,11 @@
+f0cdef,127.0.0.1,GET,http://localhost/symfony_project/MovieStars/public/,1554724499,,200
+54f5ba,127.0.0.1,GET,http://localhost:8000/,1554724512,,200
+ac8f74,127.0.0.1,GET,http://localhost:8000/favicon.ico,1554724513,c9fc34,200
+c9fc34,127.0.0.1,GET,http://localhost:8000/favicon.ico,1554724513,,404
+1973cd,127.0.0.1,GET,http://localhost/symfony_project/MovieStars/public/,1554724991,,200
+908de4,127.0.0.1,GET,http://localhost/symfony_project/MovieStars/public/,1554727768,,200
+e0765c,127.0.0.1,GET,http://localhost/symfony_project/MovieStars/public/,1554727910,,200
+73354f,127.0.0.1,GET,http://localhost/symfony_project/MovieStars/public/,1554731415,,200
+309f45,127.0.0.1,GET,http://localhost/symfony_project/MovieStars/public/,1554731418,,200
+f553eb,127.0.0.1,GET,http://localhost/symfony_project/MovieStars/public/,1554731420,,200
+e06e03,127.0.0.1,GET,http://localhost/symfony_project/MovieStars/public/,1554731592,,200
