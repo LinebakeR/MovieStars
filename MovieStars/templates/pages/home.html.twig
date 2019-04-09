@@ -2,8 +2,33 @@
 
 
 {% block body %}
-{{ movies.title }}
-{{ movies.poster_path}}
+
+<h1 class='text-center text-primary mt-4'>Popular movies</h1>
+
+
+<div class='container'>
+<div class="row">
+{% for movie in movies.results %}
+    <div class="col-sm-4 mb-3 mt-4">
+        <div class="card">
+            
+            <div class="card-content mx-auto">
+                <h4 class='text-center'>{{movie.title}}</h4>
+            </div>
+            <div class="card-image mx-auto">
+                <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" class='img-responsive'>
+            </div>
+            <div class="card-content mt-2">
+                <p class='text-justify'>{{movie.overview}}</p>
+            </div>
+            <div class="card-action">
+                <a href="#" class='text-warning'>Voir en détails</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
 
 
 {% endblock %}

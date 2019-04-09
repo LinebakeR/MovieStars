@@ -22,7 +22,7 @@ class HomeController extends AbstractController{
 
         $token  = new ApiToken("cea3e776cf0ad1a0e764b72aa0236425");
         $client = new Client($token);
-        $movie = $client->getMoviesApi()->getMovie(550);
+        $movie = $client->getMoviesApi()->getPopular();
         
  
         dump($movie);
