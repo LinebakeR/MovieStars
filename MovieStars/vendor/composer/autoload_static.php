@@ -130,6 +130,7 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         ),
         'E' => 
         array (
+            'EightPoints\\Bundle\\GuzzleBundle\\' => 32,
             'Egulias\\EmailValidator\\' => 23,
             'EasyCorp\\EasyLog\\' => 17,
         ),
@@ -469,6 +470,10 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         'Facebook\\WebDriver\\' => 
         array (
             0 => __DIR__ . '/..' . '/facebook/webdriver/lib',
+        ),
+        'EightPoints\\Bundle\\GuzzleBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/eightpoints/guzzle-bundle/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (

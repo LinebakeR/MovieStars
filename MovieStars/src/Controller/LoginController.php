@@ -14,10 +14,7 @@ class LoginController extends AbstractController{
     *@return Response
     */
     public function index() : Response{
-
     return new Response ('Page de connexion');
 }
-
-    
 
 }
