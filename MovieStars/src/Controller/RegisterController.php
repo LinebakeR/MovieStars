@@ -13,9 +13,9 @@ class RegisterController extends AbstractController{
     *@Route("/register", name="register.index");
     *@return Response
     */
-    public function index() : Response{
+    public function index(): Response{
 
-    return new Response ('Page d\'enregistrement');
+    return new Response ("login");
 }
 
     

@@ -2,23 +2,31 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+use Tmdb\Client;
+use Tmdb\ApiToken;
 use Twig\Environment;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class HomeController{
-
-    private $twig;
 
 
-    public function __construct(Environment $twig){
+class HomeController extends AbstractController{
 
-        $this->twig = $twig;
-
-    }
+    /**
+     * @Route("/", name="movies")
+     * @return Response
+     */
     public function index(){
 
-    return new Response($this->twig->render('pages/home.html.twig'));
-}
-
+        $token  = new ApiToken("cea3e776cf0ad1a0e764b72aa0236425");
+        $client = new Client($token);
+        $movie = $client->getMoviesApi()->getMovie(550);
+ 
+        dump($movie);
+        return $this->render('pages/home.html.twig', [
+            'movies' => $movie
+        ]);
+    }
 
 }
