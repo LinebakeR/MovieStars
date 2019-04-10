@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Tmdb\Api\Movies;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 
@@ -28,11 +29,11 @@ class HomeController extends AbstractController{
         dump($movie);
         return $this->render('pages/home.html.twig', [
             'movies' => $movie,
-            
         ]);
     }
+
     /**
-     * @Route ("/{id}", name="details")
+     * @Route ("/{id}", name="details", requirements={"id": "\d+"})
      */
     public function movieScript($id){
 
