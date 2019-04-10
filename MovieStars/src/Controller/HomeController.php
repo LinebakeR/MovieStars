@@ -31,5 +31,20 @@ class HomeController extends AbstractController{
             
         ]);
     }
+    /**
+     * @Route ("/{id}", name="details")
+     */
+    public function movieScript($id){
+
+        $token  = new ApiToken("cea3e776cf0ad1a0e764b72aa0236425");
+        $client = new Client($token);
+        $script = $client->getMoviesApi()->getMovie($id);
+        dump($script);
+        return $this->render('pages/movieDetail.html.twig', [
+            'script' => $script,
+        ]);
+    }
+
+
 
 }
