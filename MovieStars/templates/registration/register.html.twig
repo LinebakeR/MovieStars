@@ -3,18 +3,26 @@
 {% block title %}Registration page{% endblock %}
 
 {% block body %}
-    <h1>Create your Account</h1><br>
+    <h1 class='text-center'>Create your Account</h1><br>
 
+
+<div class='container col-sm-3'>
     {{ form_start(registrationForm) }}
 
-    
-    <label for="exampleInputEmail1">{{ form_row(registrationForm.email) }}</label>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+    <label for="exampleInputName">{{ form_row(registrationForm.name,{attr:{'placeholder':'Name', 'style':'width:300px'}}) }}</label>
+
+
+    <label for="exampleInputEmail1">{{ form_row(registrationForm.email,{attr:{'placeholder':'Email', 'style':'width:400px'}}) }}</label>
  
-    <br>
-    <label for="exampleInputPassword1">{{ form_row(registrationForm.plainPassword) }}</label>
+   {#  <br>
+    <label for="exampleInputPassword1">{{ form_row(registrationForm.plainPassword, {attr:{'placeholder': 'Password'}}) }}</label> #}
     
+    {{ form_row(registrationForm.password) }}
  
-    <br><button type="button" class="btn btn-dark">Register</button>
+    <button type="button" class="btn btn-dark">Register</button>
     {{ form_end(registrationForm) }}
+
+</div>
+
 {% endblock %}
