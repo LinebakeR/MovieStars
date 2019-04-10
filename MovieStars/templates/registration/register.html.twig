@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registration page{% endblock %}
+
+{% block body %}
+    <h1>Create your Account</h1><br>
+
+    {{ form_start(registrationForm) }}
+
+    
+    <label for="exampleInputEmail1">{{ form_row(registrationForm.email) }}</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+ 
+ 
+    <label for="exampleInputPassword1">{{ form_row(registrationForm.plainPassword) }}</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+ 
+        <button type="button" class="btn btn-dark">Register</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
