@@ -12,17 +12,23 @@
     <div class="col-sm-4 mb-3 mt-4">
         <div class="card">
             
-            <div class="card-content mx-auto">
+            <div class="card-content mx-auto mt-2">
                 <h4 class='text-center'>{{movie.title}}</h4>
             </div>
             <div class="card-image mx-auto">
                 <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" class='img-responsive'>
             </div>
-            <div class="card-content mt-2">
-                <p class='text-justify'>{{movie.overview}}</p>
+            <div class="card content text-center bg-info">
+                <small>Note : {{ movie.vote_average}}/10</small>
             </div>
-            <div class="card-action">
-                <a href="{{movie.id}}" class='text-warning'>Voir en détails</a>
+            <div class=" container card-content mt-2">
+                <p class='text-justify'>{{movie.overview[:100]}}...</p>
+            </div>
+            <div class="card-content mt-2 text-center">
+                <p> Release date : {{movie.release_date|date("d M Y")}} </p>
+            </div>
+            <div class="card-action mx-auto">
+                <button type="button" class='btn btn-warning mb-2'><a href="{{movie.id}}" class='text-body'>Show details</a></button>
             </div>
         </div>
     </div>
