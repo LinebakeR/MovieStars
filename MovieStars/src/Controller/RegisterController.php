@@ -11,13 +11,22 @@ class RegisterController extends AbstractController{
 
     /**
     *@Route("/register", name="register.index");
-    *@return Response
+     *@return Response
     */
-    public function index(): Response{
+  /*   public function __construct($id, $name, $lastname, $password, $passwdConfirm){
+        $this->id = $id;
+        $this->name = $name;
+        $this->lastname = $lastname;
+        $this->password = $password;
+        $this->passwdConfirm = $passwdConfirm;
+        
+    }
 
-    return new Response ("login");
-}
+    public function createUser(){
 
+        $user = new RegisterController();
+
+    } */
     
 
 }
