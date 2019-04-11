@@ -2,11 +2,25 @@
 
 {% block body %}
 
-<p><a href="#" class="text-info">The original title of this movie is {{script.original_title}}</a></p>
-<p><a href="#" class="text-primary">{{script.budget}} Dollars, is the budget that this movie needed</a></p>
-<p><a href="{{script.homepage}}" class="text-danger">{{script.homepage}}</a></p>
-<p><a href="#" class="text-dark">This movie was release the {{script.release_date}}</a></p>
-<p><a href="#" class="text-muted">{{script.revenue}} dollars is the amount that movie earned</a></p>
-<p><a href="#" class="text-white bg-dark">This movie is already {{script.status}}</a></p>
+    <div class="container mt-3" style='width:40%;float:left'>
+        <img src="https://image.tmdb.org/t/p/w500{{script.poster_path}}" style='float:left' class='img-responsive'>
+    </div>
+
+    <div class="container mt-3" style='width:58%;float:right'>
+        <h2 class='text-primary'>{{script.title}}</h2><br>
+        <p><b>Release date : </b> {{ script.release_date|date("d M Y")}} </p>
+        <p><b>Genres : </b> {% for genre in script.genres %} {% if loop.last %} {{ genre.name }}. {% else %} {{ genre.name }},   {% endif %} {% endfor %}</p>
+        <p><b>Production companies : </b> {% for producer in script.production_companies %} {% if loop.last %} {{ producer.name }}. {% else %} {{ producer.name }},   {% endif %} {% endfor %}</p>
+        <p><b>Budget : </b> {{ script.budget|number_format(0,'.',' ')}} $</p>
+        <p><b>Revenue : </b> {{ script.revenue|number_format(0,'.',' ')}} $</p>
+        <b>IMDB link : </b><a href="https://www.imdb.com/title/{{ script.imdb_id }}"> {{ script.original_title }}</a>
+        <br><br>
+        <div class='container'>
+            <h5><u>Summary</u> : </h5>
+            <p>{{ script.overview }}</p>
+        </div>
+    </div>
+
+
 
 {% endblock %}
