@@ -3,6 +3,12 @@
 
 {% block body %}
 
+{% for message in app.flashes('success') %}
+<div class="alert alert-success" role="alert">
+  You're connected!
+</div>
+{% endfor %}
+
 <h1 class='text-center text-primary mt-4'>Popular movies</h1>
 
 

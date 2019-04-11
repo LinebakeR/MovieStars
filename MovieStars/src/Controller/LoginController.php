@@ -11,10 +11,10 @@ class LoginController extends AbstractController{
 
     /**
     *@Route("/login", name="login.index");
-    *@return Response
+    *
     */
-    public function index() : Response{
-    return new Response ('Page de connexion');
+    public function index($connected = false) : Response{
+    return $this->render('Pages/login.html.twig');
 }
 
 }

@@ -16,6 +16,11 @@ security:
             security: false
         main:
             anonymous: true
+            provider: app_user_provider
+
+            form_login:
+                login_path: app_register
+                check_path: app_register
 
             # activate different ways to authenticate
 
