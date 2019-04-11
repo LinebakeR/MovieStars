@@ -18,12 +18,16 @@ security:
             anonymous: true
             provider: app_user_provider
 
-            #form_login:
-            #    login_path: app_login
-            #    check_path: app_login
+            form_login:
+                login_path: app_login
+                check_path: app_login
             guard:
                 authenticators:
                     - App\Security\LoginPageAuthenticator
+
+            logout: 
+                path: logout
+                target: movies
 
             # activate different ways to authenticate
 
