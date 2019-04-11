@@ -34,7 +34,7 @@ class RegistrationController extends Controller
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
-            $this->addFlash("success", "You're connected."); // addFlash de la class Controller pour message une fois connecté
+            $this->addFlash("success", "Welcome in MovieStars !"); // fonction addFlash de la class Controller pour message une fois connecté
 
    //         $this->get('session')->getFlashBag()->add('success', '')
     //        $_SESSION['auth']['success'] = "You're connected";
