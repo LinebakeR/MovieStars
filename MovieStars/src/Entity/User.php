@@ -42,6 +42,11 @@ class User implements UserInterface
      */
     private $name;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $admin;
+
     
 
 
@@ -131,6 +136,18 @@ class User implements UserInterface
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getAdmin(): ?bool
+    {
+        return $this->admin;
+    }
+
+    public function setAdmin(bool $admin): self
+    {
+        $this->admin = $admin;
 
         return $this;
     }
