@@ -13,6 +13,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User implements UserInterface
 {
+
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -42,11 +44,17 @@ class User implements UserInterface
      */
     private $name;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $admin;
+    
+    private $admin = NULL;
 
+    public function getAdmin(){
+
+        return $this->admin;
+    }
+    public function setAdmin($admin){
+        $this->admin = $admin;
+        return $this;
+    }
     
 
 
@@ -140,15 +148,5 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getAdmin(): ?bool
-    {
-        return $this->admin;
-    }
-
-    public function setAdmin(bool $admin): self
-    {
-        $this->admin = $admin;
-
-        return $this;
-    }
+    
 }
