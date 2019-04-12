@@ -43,9 +43,17 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $name;
+    
 
     
   
+    public function __construct($roles){
+
+        
+        $this->roles = ['ROLE_USER'];
+
+    }
+
 
 
     public function getId(): ?int
@@ -82,7 +90,7 @@ class User implements UserInterface
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+         /* $roles[] = 'ROLE_USER'; */
 
         return array_unique($roles);
     }
