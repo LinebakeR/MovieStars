@@ -4,31 +4,33 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Bienvenue sur le site MovieStars!{% endblock %}</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
-
-
+        <link rel="stylesheet" type="text/css" href="/theme.css">
+              
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   
 {% if not app.user %}
   <div class="navbar right-block" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
+      <p class="nav-item active text-white">
         <a class="nav-link" href="{{ path('app_login')}}">Log in<span class="sr-only"></span></a>
-      </li>
+      </p>
   </div>
 {% else %}
- 
-{% endif %}
-
-
-  <a class="navbar-brand mx-auto" href="{{ path('movies')}}">MovieStars</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="sr-only"></span>
+<div class="container-fluid">
+  <button type="button" id="sidebarCollapse" class="btn btn-info">
+      <i class="material-icons">menu</i>
   </button>
-
+</div>
+{% endif %}
+<div class="container-fluid" style='width:10%'>
+  <h4 class='text-center'><a class="navbar-brand text-warning" href="{{ path('movies')}}">MovieStars</a></h4>
+</div>
 {% if not app.user %}
 <div class="navbar" id="navbarSupportedContent">
     <ul class="navbar-nav ml-3">
@@ -38,22 +40,61 @@
     </ul>
     </div>
       {% else %}
+<div class="container-fluid">
 <div class="navbar" id="navbarSupportedContent">
-      <p class="nav-item">
+      <p class="nav-item text-white" style='margin-left:25rem'>
        <a class="nav-link" href="{{ path('logout')}}">Log out<span class="sr-only"></span></a>
       </p>
+</div>
 </div>
   {% endif %}
 </nav>
 
-{% block body %}
+<div class='wrapper'>
 
-{% endblock %}
+<!-- Sidebar -->
+<nav id="sidebar" class='active'>
+<div class="sidebar-header">
+            <h3>Option menu</h3>
+        </div>
 
-        {% block javascripts %}{% endblock %}
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <ul class="list-unstyled components">
+            <p>Movies</p>   
+            <li>
+                <a href="#">Search movies</a>
+            </li>
+            <li>
+                <a href="#">Upcoming moving</a>
+            </li>
+            <li>
+                <a href="#">Top rated</a>
+            </li>
 
-    </body>
+            <p class='mt-4'> User </p>
+            <li>
+                <a href="#">My account</a>
+            </li>
+            <li>
+                <a href="#">My lists</a>
+            </li>
+        </ul>
+</nav>
+{% block body %}{% endblock %}
+
+{% block javascripts %}{% endblock %}
+
+    {{ encore_entry_script_tags('app') }}
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--<script src="jquery-3.3.1.min.js"></script>-->
+    <script>
+      $(document).ready(function() {
+        $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+        });
+      })
+    </script>
+</div>
+  </body>
 </html>
 
 {% block footer %}

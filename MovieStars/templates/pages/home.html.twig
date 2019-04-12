@@ -9,10 +9,11 @@
 </div>
 {% endfor %}
 
-<h1 class='text-center text-primary mt-4'>Popular movies</h1>
+
 
 
 <div class='container'>
+ <h1 class='text-center text-primary mt-4'>Popular movies</h1>
 <div class="row">
 {% for movie in movies.results %}
     <div class="col-sm-4 mb-3 mt-4">
@@ -31,7 +32,7 @@
                 <p class='text-justify'>{{movie.overview[:100]}}...</p>
             </div>
             <div class="card-content mt-2 text-center">
-                <p> Release date : {{movie.release_date|date("d M Y")}} </p>
+                <p><b> Release date : </b>{{movie.release_date|date("d M Y")}} </p>
             </div>
             <div class="card-action mx-auto">
                 <button type="button" class='btn btn-warning mb-2'><a href="{{movie.id}}" class='text-body'>Show details</a></button>
