@@ -41,6 +41,7 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         ),
         'S' => 
         array (
+            'Symfony\\WebpackEncoreBundle\\' => 28,
             'Symfony\\Polyfill\\Php72\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
@@ -185,6 +186,10 @@ class ComposerStaticInit449fe4072ead477e0446a7462b3ac0d1
         'Tmdb\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-tmdb/api/lib/Tmdb',
+        ),
+        'Symfony\\WebpackEncoreBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src',
         ),
         'Symfony\\Polyfill\\Php72\\' => 
         array (
