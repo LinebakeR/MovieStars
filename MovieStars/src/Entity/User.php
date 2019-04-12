@@ -45,17 +45,7 @@ class User implements UserInterface
     private $name;
 
     
-    private $admin = NULL;
-
-    public function getAdmin(){
-
-        return $this->admin;
-    }
-    public function setAdmin($admin){
-        $this->admin = $admin;
-        return $this;
-    }
-    
+  
 
 
     public function getId(): ?int

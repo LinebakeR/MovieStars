@@ -15,8 +15,7 @@ class UserType extends AbstractType
             ->add('email')
             ->add('roles')
             ->add('password')
-            ->add('name')
-        ;
+            ->add('name');
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -25,4 +24,6 @@ class UserType extends AbstractType
             'data_class' => User::class,
         ]);
     }
+
+    
 }
